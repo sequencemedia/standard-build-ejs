@@ -42,7 +42,7 @@
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
     "vinyl-paths": "^3.0.1",
-    "yargs-parser": "^20.2.6"
+    "yargs-parser": "^20.2.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
