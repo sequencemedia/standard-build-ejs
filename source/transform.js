@@ -39,7 +39,9 @@ const setFilePathList = (filePathList, version) => Promise.all(filePathList.map(
 export default async function transform () {
   log('transform')
 
-  const filePathList = await getFilePathList()
-
-  return setFilePathList(filePathList, VERSION)
+  return (
+    await setFilePathList(
+      await getFilePathList(), VERSION
+    )
+  )
 }
