@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/standard-build-ejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standard Build (EJS)",
   "private": true,
   "main": "./app.js",
