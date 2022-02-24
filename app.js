@@ -1,5 +1,5 @@
 const debug = require('debug')
 
-const log = debug('@sequencemedia')
+const log = debug('@sequencemedia/standard-build-ejs')
 
-log('`@sequencemedia` is awake')
+log('`@sequencemedia/standard-build-ejs` is awake')
