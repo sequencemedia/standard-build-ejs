@@ -11,20 +11,20 @@
   },
   "license": "UNLICENSED",
   "scripts": {
-    "start": "cross-env NODE_ENV=production DEBUG=@sequencemedia node app",
-    "dev": "cross-env NODE_ENV=development npm run gulp",
     "build": "cross-env NODE_ENV=production npm run gulp -- build",
     "build:html": "npm run gulp -- build:html",
-    "watch": "cross-env NODE_ENV=development npm run gulp -- watch",
-    "watch:html": "npm run gulp -- watch:html",
-    "transform": "cross-env NODE_ENV=production npm run gulp -- transform",
+    "dev": "cross-env NODE_ENV=development npm run gulp",
+    "gulp": "gulp --color ",
     "lint": "npm run lint:js",
     "lint:fix": "npm run lint:js:fix",
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
+    "pre-commit": "npm run lint && npm run test && npm run build && npm run transform && git add public",
+    "start": "cross-env NODE_ENV=production DEBUG=@sequencemedia node app",
     "test": "cross-env NODE_ENV=test mocha test --recursive -r @babel/register --verbose --color",
-    "gulp": "gulp --color ",
-    "pre-commit": "npm run lint && npm run test && npm run build && npm run transform && git add public"
+    "transform": "cross-env NODE_ENV=production npm run gulp -- transform",
+    "watch": "cross-env NODE_ENV=development npm run gulp -- watch",
+    "watch:html": "npm run gulp -- watch:html"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
